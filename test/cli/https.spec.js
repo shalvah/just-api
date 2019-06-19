@@ -1,3 +1,5 @@
+/* Removed this test for now because it depends on an external service - the Internet and Google
+
 'use strict';
 
 const runJustAPIJSON = require('./helpers').runJustAPIJSON;
@@ -34,4 +36,4 @@ describe('https', function () {
         expect(test.error).to.be.a('null');
     });
 
-});
+});*/

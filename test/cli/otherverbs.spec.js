@@ -27,7 +27,7 @@ describe('Other verbs', function () {
         suiteContext.result = reportData.suites[0];
     });
 
-    let tests = ['put json data as  body', 'patch json data as  body', 'delete item', 'HEAD method', 'options method'];
+    let tests = ['put json data as body', 'patch json data as  body', 'delete item', 'HEAD method', 'options method'];
 
     tests.forEach(function (testTitle) {
         it(testTitle, function () {

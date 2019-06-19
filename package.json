@@ -36,7 +36,6 @@
     "npm": ">=4.5.0"
   },
   "scripts": {
-    "clean": "rm -rf ./node_modules",
     "install_testapi": "cd test/api && npm install",
     "start_testapi": "npm run install_testapi && cd test/api && node server.js",
     "clean_testlogs": "rm -rf test/cli/src/logs && mkdir test/cli/src/logs",

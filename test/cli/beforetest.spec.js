@@ -8,7 +8,7 @@ describe('before test hook', function () {
     let suiteContext = this;
 
     before(async function () {
-        let result = runJustAPIJSON('hooks/beforetest.suite.yml');
+        let result = runJustAPIJSON('hooks/beforetest.suite.js');
         if (result.error) throw result.error;
         expect(result.exitCode).to.equal(1);
         expect(result.terminationSignal).to.be.a('null');
@@ -27,35 +27,35 @@ describe('before test hook', function () {
         suiteContext.result = reportData.suites[0];
     });
 
-    it('before test hook inline sync funtion', function () {
+    it('before test hook inline sync function', function () {
         let result = suiteContext.result;
         let test = result.tests.find(t =>  t.name === this.test.title);
         expect(test.status).to.equal('pass');
         expect(test.error).to.be.a('null');
     });
 
-    it('before test hook inline async funtion', function () {
+    it('before test hook inline async function', function () {
         let result = suiteContext.result;
         let test = result.tests.find(t =>  t.name === this.test.title);
         expect(test.status).to.equal('pass');
         expect(test.error).to.be.a('null');
     });
 
-    it('before test hook module sync funtion', function () {
+    it('before test hook module sync function', function () {
         let result = suiteContext.result;
         let test = result.tests.find(t =>  t.name === this.test.title);
         expect(test.status).to.equal('pass');
         expect(test.error).to.be.a('null');
     });
 
-    it('before test hook module async funtion', function () {
+    it('before test hook module async function', function () {
         let result = suiteContext.result;
         let test = result.tests.find(t =>  t.name === this.test.title);
         expect(test.status).to.equal('pass');
         expect(test.error).to.be.a('null');
     });
 
-    it('before test hook inline sync funtion throws error - should fail', function () {
+    it('before test hook inline sync function throws error - should fail', function () {
         let result = suiteContext.result;
         let test = result.tests.find(t =>  t.name === this.test.title);
         expect(test.status).to.equal('fail');
@@ -63,7 +63,7 @@ describe('before test hook', function () {
         expect(test.error.message).to.contain('error thrown in before test hook');
     });
 
-    it('before test hook inline async funtion throws error - should fail', function () {
+    it('before test hook inline async function throws error - should fail', function () {
         let result = suiteContext.result;
         let test = result.tests.find(t =>  t.name === this.test.title);
         expect(test.status).to.equal('fail');
@@ -71,7 +71,7 @@ describe('before test hook', function () {
         expect(test.error.message).to.contain('error thrown in before test hook');
     });
 
-    it('before test hook module sync funtion throws error - should fail', function () {
+    it('before test hook module sync function throws error - should fail', function () {
         let result = suiteContext.result;
         let test = result.tests.find(t =>  t.name === this.test.title);
         expect(test.status).to.equal('fail');
@@ -79,7 +79,7 @@ describe('before test hook', function () {
         expect(test.error.message).to.contain('error thrown in before test hook');
     });
 
-    it('before test hook module async funtion throws error - should fail', function () {
+    it('before test hook module async function throws error - should fail', function () {
         let result = suiteContext.result;
         let test = result.tests.find(t =>  t.name === this.test.title);
         expect(test.status).to.equal('fail');
@@ -87,7 +87,7 @@ describe('before test hook', function () {
         expect(test.error.message).to.contain('error thrown in before test hook');
     });
 
-    it('before test hook module async funtion rejected promise - should fail', function () {
+    it('before test hook module async function rejected promise - should fail', function () {
         let result = suiteContext.result;
         let test = result.tests.find(t =>  t.name === this.test.title);
         expect(test.status).to.equal('fail');

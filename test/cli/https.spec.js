@@ -10,7 +10,7 @@ describe('https', function () {
     let suiteContext = this;
 
     before(function () {
-        let result = runJustAPIJSON('https.suite.yml');
+        let result = runJustAPIJSON('https.suite.js');
         if (result.error) throw result.error;
         expect(result.exitCode).to.equal(0);
         expect(result.terminationSignal).to.be.a('null');

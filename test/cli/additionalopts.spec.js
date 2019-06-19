@@ -8,7 +8,7 @@ describe('additional request options', function () {
     let suiteContext = this;
 
     before(async function () {
-        let result = runJustAPIJSON('additional.opts.suite.yml');
+        let result = runJustAPIJSON('additional.opts.suite.js');
         if (result.error) throw result.error;
         expect(result.exitCode).to.equal(1);
         expect(result.terminationSignal).to.be.a('null');

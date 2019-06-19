@@ -8,7 +8,7 @@ describe('grep', function () {
     let suiteContext = this;
 
     it('grep using string', async function () {
-        let result = runJustAPIJSON('grep.suite.yml', ['--grep', 'matches']);
+        let result = runJustAPIJSON('grep.suite.js', ['--grep', 'matches']);
         if (result.error) throw result.error;
 
         expect(result.exitCode).to.equal(0);
@@ -39,7 +39,7 @@ describe('grep', function () {
     });
 
     it('grep using regex', async function () {
-        let result = runJustAPIJSON('grep.suite.yml', ['--grep', /(\d)/]);
+        let result = runJustAPIJSON('grep.suite.js', ['--grep', /(\d)/]);
         if (result.error) throw result.error;
 
         expect(result.exitCode).to.equal(0);

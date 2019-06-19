@@ -14,7 +14,7 @@ describe('after all hook', function () {
     }
 
     it('inline async error', function () {
-        let result = runConfigSuite('hooks/afterall/afterall.inline.async.failure.suite.yml');
+        let result = runConfigSuite('hooks/afterall/afterall.inline.async.failure.suite.js');
         expect(result.exitCode).to.equal(1);
         expect(result.terminationSignal).to.be.a('null');
         const report = fs.readFileSync(result.jsonReport);
@@ -33,7 +33,7 @@ describe('after all hook', function () {
     });
 
     it('inline async success', function () {
-        let result = runConfigSuite('hooks/afterall/afterall.inline.async.success.suite.yml');
+        let result = runConfigSuite('hooks/afterall/afterall.inline.async.success.suite.js');
         expect(result.exitCode).to.equal(0);
         expect(result.terminationSignal).to.be.a('null');
         const report = fs.readFileSync(result.jsonReport);
@@ -53,7 +53,7 @@ describe('after all hook', function () {
 
 
     it('inline sync error', function () {
-        let result = runConfigSuite('hooks/afterall/afterall.inline.failure.suite.yml');
+        let result = runConfigSuite('hooks/afterall/afterall.inline.failure.suite.js');
         expect(result.exitCode).to.equal(1);
         expect(result.terminationSignal).to.be.a('null');
         const report = fs.readFileSync(result.jsonReport);
@@ -72,7 +72,7 @@ describe('after all hook', function () {
     });
 
     it('inline sync valid', function () {
-        let result = runConfigSuite('hooks/afterall/afterall.inline.success.suite.yml');
+        let result = runConfigSuite('hooks/afterall/afterall.inline.success.suite.js');
         expect(result.exitCode).to.equal(0);
         expect(result.terminationSignal).to.be.a('null');
         const report = fs.readFileSync(result.jsonReport);

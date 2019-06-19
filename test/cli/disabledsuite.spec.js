@@ -7,7 +7,7 @@ const fs = require('fs');
 describe('Disabled suite', function () {
 
     it('correct response code', async function () {
-        let result = runJustAPIJSON('disabledsuite.suite.yml');
+        let result = runJustAPIJSON('disabledsuite.suite.js');
         if (result.error) throw result.error;
         expect(result.exitCode).to.equal(0);
         expect(result.terminationSignal).to.be.a('null');

@@ -8,7 +8,7 @@ describe('headers', function () {
     let suiteContext = this;
 
     before(async function () {
-        let result = runJustAPIJSON('headers.suite.yaml');
+        let result = runJustAPIJSON('headers.suite.js');
         if (result.error) throw result.error;
         expect(result.exitCode).to.equal(1);
         expect(result.terminationSignal).to.be.a('null');

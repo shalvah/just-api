@@ -14,7 +14,7 @@ describe('suite configuration', function () {
     }
 
     it('module sync success', function () {
-        let result = runConfigSuite('hooks/beforeeach/beforeeach.module.success.suite.yml');
+        let result = runConfigSuite('hooks/beforeeach/beforeeach.module.success.suite.js');
         expect(result.exitCode).to.equal(0);
         expect(result.terminationSignal).to.be.a('null');
         const report = fs.readFileSync(result.jsonReport);
@@ -32,7 +32,7 @@ describe('suite configuration', function () {
     });
 
     it('module sync failure', function () {
-        let result = runConfigSuite('hooks/beforeeach/beforeeach.module.failure.suite.yml');
+        let result = runConfigSuite('hooks/beforeeach/beforeeach.module.failure.suite.js');
         expect(result.exitCode).to.equal(1);
         expect(result.terminationSignal).to.be.a('null');
         const report = fs.readFileSync(result.jsonReport);
@@ -54,7 +54,7 @@ describe('suite configuration', function () {
     });
 
     it('module async success', function () {
-        let result = runConfigSuite('hooks/beforeeach/beforeeach.module.async.success.suite.yml');
+        let result = runConfigSuite('hooks/beforeeach/beforeeach.module.async.success.suite.js');
         expect(result.exitCode).to.equal(0);
         expect(result.terminationSignal).to.be.a('null');
         const report = fs.readFileSync(result.jsonReport);
@@ -72,7 +72,7 @@ describe('suite configuration', function () {
     });
 
     it('module async failure', function () {
-        let result = runConfigSuite('hooks/beforeeach/beforeeach.module.async.failure.suite.yml');
+        let result = runConfigSuite('hooks/beforeeach/beforeeach.module.async.failure.suite.js');
         expect(result.exitCode).to.equal(1);
         expect(result.terminationSignal).to.be.a('null');
         const report = fs.readFileSync(result.jsonReport);
@@ -95,7 +95,7 @@ describe('suite configuration', function () {
 
 
     it('inline sync success', function () {
-        let result = runConfigSuite('hooks/beforeeach/beforeeach.inline.success.suite.yml');
+        let result = runConfigSuite('hooks/beforeeach/beforeeach.inline.success.suite.js');
         expect(result.exitCode).to.equal(0);
         expect(result.terminationSignal).to.be.a('null');
         const report = fs.readFileSync(result.jsonReport);
@@ -113,7 +113,7 @@ describe('suite configuration', function () {
     });
 
     it('inline sync failure', function () {
-        let result = runConfigSuite('hooks/beforeeach/beforeeach.inline.failure.suite.yml');
+        let result = runConfigSuite('hooks/beforeeach/beforeeach.inline.failure.suite.js');
         expect(result.exitCode).to.equal(1);
         expect(result.terminationSignal).to.be.a('null');
         const report = fs.readFileSync(result.jsonReport);
@@ -135,7 +135,7 @@ describe('suite configuration', function () {
     });
 
     it('inline async success', function () {
-        let result = runConfigSuite('hooks/beforeeach/beforeeach.inline.async.success.suite.yml');
+        let result = runConfigSuite('hooks/beforeeach/beforeeach.inline.async.success.suite.js');
         expect(result.exitCode).to.equal(0);
         expect(result.terminationSignal).to.be.a('null');
         const report = fs.readFileSync(result.jsonReport);
@@ -153,7 +153,7 @@ describe('suite configuration', function () {
     });
 
     it('inline async failure', function () {
-        let result = runConfigSuite('hooks/beforeeach/beforeeach.inline.async.failure.suite.yml');
+        let result = runConfigSuite('hooks/beforeeach/beforeeach.inline.async.failure.suite.js');
         expect(result.exitCode).to.equal(1);
         expect(result.terminationSignal).to.be.a('null');
         const report = fs.readFileSync(result.jsonReport);

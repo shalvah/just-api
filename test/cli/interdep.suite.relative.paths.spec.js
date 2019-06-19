@@ -8,7 +8,7 @@ describe('Inter suite spec dependencies with relative path', function () {
     let suiteContext = this;
 
     before(async function () {
-        let result = runJustAPIJSON('suitedependencies/relative.intersuite.dep.suite.yml');
+        let result = runJustAPIJSON('suitedependencies/relative.intersuite.dep.suite.js');
 
         if (result.error) throw result.error;
         expect(result.exitCode).to.equal(0);

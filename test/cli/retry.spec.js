@@ -8,7 +8,7 @@ describe('retries', function () {
     let suiteContext = this;
 
     before(async function () {
-        let result = runJustAPIJSON('retry.suite.yml', ['--reporter-options', 'logRequests']);
+        let result = runJustAPIJSON('retry.suite.js', ['--reporter-options', 'logRequests']);
         if (result.error) throw result.error;
         expect(result.exitCode).to.equal(1);
         expect(result.terminationSignal).to.be.a('null');

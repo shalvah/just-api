@@ -8,7 +8,7 @@ describe('Custom Validator', function () {
     let suiteContext = this;
 
     before(async function () {
-        let result = runJustAPIJSON('customvalidator.suite.yml');
+        let result = runJustAPIJSON('customvalidator.suite.js');
         if (result.error) throw result.error;
         expect(result.exitCode).to.equal(1);
         expect(result.terminationSignal).to.be.a('null');

@@ -8,7 +8,7 @@ describe('loop', function () {
     let suiteContext = this;
 
     before(async function () {
-        let result = runJustAPIJSON('loop.suite.yml');
+        let result = runJustAPIJSON('loop.suite.js');
         if (result.error) throw result.error;
         expect(result.exitCode).to.equal(1);
         expect(result.terminationSignal).to.be.a('null');

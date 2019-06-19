@@ -9,7 +9,7 @@ describe('Disabled specs', function () {
     let tests = ['disabled', 'enabled default', 'enabled with spec'];
 
     before(async function () {
-        let result = runJustAPIJSON('disabledspecs.suite.yml');
+        let result = runJustAPIJSON('disabledspecs.suite.js');
         if (result.error) throw result.error;
         expect(result.exitCode).to.equal(0);
         expect(result.terminationSignal).to.be.a('null');

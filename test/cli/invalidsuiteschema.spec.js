@@ -7,7 +7,7 @@ const fs = require('fs');
 describe('Invalid suite schema', function () {
 
     it('invalid suite schema - request key missing in spec', function () {
-        let result = runJustAPIJSON('suiteschema/invalidspecschema.suite.yml');
+        let result = runJustAPIJSON('suiteschema/invalidspecschema.suite.js');
         expect(result.exitCode).to.equal(1);
         expect(result.terminationSignal).to.be.a('null');
         const report = fs.readFileSync(result.jsonReport);

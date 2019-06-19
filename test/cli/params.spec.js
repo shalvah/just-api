@@ -8,7 +8,7 @@ describe('Params', function () {
     let suiteContext = this;
 
     before(async function () {
-        let result = runJustAPIJSON('params.suite.yml');
+        let result = runJustAPIJSON('params.suite.js');
         if (result.error) throw result.error;
         expect(result.exitCode).to.equal(0);
         expect(result.terminationSignal).to.be.a('null');

@@ -6,7 +6,7 @@ const fs = require('fs');
 
 describe('smoke test', async function () {
     it('can invoke and run just-api with serial execution mode', async function () {
-        let result = runJustAPIJSON('smoke*.suite.yml');
+        let result = runJustAPIJSON('smoke*.suite.js');
         if (result.error) throw result.error;
 
         expect(result.exitCode).to.equal(0);
@@ -28,7 +28,7 @@ describe('smoke test', async function () {
 
     it('can invoke and run just-api with parallel execution mode', async function () {
         let args = ['--parallel', '4'];
-        let result = runJustAPIJSON('smoke*.suite.yml', args);
+        let result = runJustAPIJSON('smoke*.suite.js', args);
         if (result.error) throw result.error;
 
         expect(result.exitCode).to.equal(0);

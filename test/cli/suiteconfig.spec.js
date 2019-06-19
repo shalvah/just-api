@@ -14,7 +14,7 @@ describe('suite configuration', function () {
     }
 
     it('inline async error', function () {
-        let result = runConfigSuite('suiteconfig/inline.async.error.suite.yml');
+        let result = runConfigSuite('suiteconfig/inline.async.error.suite.js');
         expect(result.exitCode).to.equal(1);
         expect(result.terminationSignal).to.be.a('null');
         const report = fs.readFileSync(result.jsonReport);
@@ -33,7 +33,7 @@ describe('suite configuration', function () {
     });
 
     it('inline async invalid config', function () {
-        let result = runConfigSuite('suiteconfig/inline.async.invalidconfig.suite.yml');
+        let result = runConfigSuite('suiteconfig/inline.async.invalidconfig.suite.js');
         expect(result.exitCode).to.equal(1);
         expect(result.terminationSignal).to.be.a('null');
         const report = fs.readFileSync(result.jsonReport);
@@ -53,7 +53,7 @@ describe('suite configuration', function () {
     });
 
     it('inline async rejected promise', function () {
-        let result = runConfigSuite('suiteconfig/inline.async.rejectedpromise.suite.yml');
+        let result = runConfigSuite('suiteconfig/inline.async.rejectedpromise.suite.js');
         expect(result.exitCode).to.equal(1);
         expect(result.terminationSignal).to.be.a('null');
         const report = fs.readFileSync(result.jsonReport);
@@ -72,7 +72,7 @@ describe('suite configuration', function () {
     });
 
     it('inline async valid', function () {
-        let result = runConfigSuite('suiteconfig/inline.async.valid.suite.yml');
+        let result = runConfigSuite('suiteconfig/inline.async.valid.suite.js');
         expect(result.exitCode).to.equal(0);
         expect(result.terminationSignal).to.be.a('null');
         const report = fs.readFileSync(result.jsonReport);
@@ -92,7 +92,7 @@ describe('suite configuration', function () {
 
 
     it('inline sync error', function () {
-        let result = runConfigSuite('suiteconfig/inline.sync.error.suite.yml');
+        let result = runConfigSuite('suiteconfig/inline.sync.error.suite.js');
         expect(result.exitCode).to.equal(1);
         expect(result.terminationSignal).to.be.a('null');
         const report = fs.readFileSync(result.jsonReport);
@@ -111,7 +111,7 @@ describe('suite configuration', function () {
     });
 
     it('inline sync invalid config', function () {
-        let result = runConfigSuite('suiteconfig/inline.sync.invalidconfig.suite.yml');
+        let result = runConfigSuite('suiteconfig/inline.sync.invalidconfig.suite.js');
         expect(result.exitCode).to.equal(1);
         expect(result.terminationSignal).to.be.a('null');
         const report = fs.readFileSync(result.jsonReport);
@@ -131,7 +131,7 @@ describe('suite configuration', function () {
     });
 
     it('inline sync valid', function () {
-        let result = runConfigSuite('suiteconfig/inline.sync.valid.suite.yml');
+        let result = runConfigSuite('suiteconfig/inline.sync.valid.suite.js');
         expect(result.exitCode).to.equal(0);
         expect(result.terminationSignal).to.be.a('null');
         const report = fs.readFileSync(result.jsonReport);

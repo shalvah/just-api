@@ -97,7 +97,7 @@ You can also send binary data as body from a file as shown below.
 
 Note that the image path should be relative to Node process's current working directory or relative to suite's path if you set `locate_files_relative` to true in `meta` section of the suite.
 
-Checkout more examples on how to specify request body [here](https://github.com/kiranz/just-api/blob/master/test/cli/src/suites/postrawbody.suite.js)
+Checkout more examples on how to specify request body [here](https://github.com/kiranz/just-api/blob/master/test/specs/suites/postrawbody.suite.js)
 
 ### x-www-form-urlencoded, Multipart requests, file uploads
 
@@ -123,7 +123,7 @@ Note that `payload` should have a key `form` and it should contain form data in 
     response:
       status_code: 200
 ```
-More examples on `x-www-form-urlencoded` tests can be found [here](https://github.com/kiranz/just-api/blob/master/test/cli/src/suites/urlencodeformpost.suite.js)
+More examples on `x-www-form-urlencoded` tests can be found [here](https://github.com/kiranz/just-api/blob/master/test/specs/suites/urlencodeformpost.suite.js)
 
 #### **specify `multipart/form-data` request**
 
@@ -151,7 +151,7 @@ Note that `payload` should have a key `form_data` and it should contain list of 
       status_code: 200
 ```
 
-More examples on `multipart/form-data` tests can be found [here](https://github.com/kiranz/just-api/blob/master/test/cli/src/suites/multipartformpost.suite.js)
+More examples on `multipart/form-data` tests can be found [here](https://github.com/kiranz/just-api/blob/master/test/specs/suites/multipartformpost.suite.js)
 
 ## Response Validation
 
@@ -212,7 +212,7 @@ Following response specification would check if response header _content-type_ m
           value: !!js/regexp /json/
 ```
 
-More examples on response header validation can be found [here](https://github.com/kiranz/just-api/blob/master/test/cli/src/suites/headers.suite.yaml)
+More examples on response header validation can be found [here](https://github.com/kiranz/just-api/blob/master/test/specs/suites/headers.suite.yaml)
 
 ### Cookies validation
 When you specify cookies in response, Just-API will validate response cookies against your specification.
@@ -245,7 +245,7 @@ Following response specification would check if response cookie _uid_ matches wi
           value: !!js/regexp /[0-9]+/
 ```
 
-More examples on response cookie validation can be found [here](https://github.com/kiranz/just-api/blob/master/test/cli/src/suites/cookies.suite.js)
+More examples on response cookie validation can be found [here](https://github.com/kiranz/just-api/blob/master/test/specs/suites/cookies.suite.js)
 
 ### Response JSON schema validation
 
@@ -293,7 +293,7 @@ You can also specify expected JSON schema in YAML by setting type as `inline` an
 
 If you are not sure about JSON schema standard, Please refer to [JSON schema](http://json-schema.org/)
 
-More examples on response JSON schema validation can be found [here](https://github.com/kiranz/just-api/blob/master/test/cli/src/suites/jsonschema.suite.js)
+More examples on response JSON schema validation can be found [here](https://github.com/kiranz/just-api/blob/master/test/specs/suites/jsonschema.suite.js)
 
 ### Response JSON body validation
 
@@ -316,7 +316,7 @@ Following sample shows that.
 
 If you are not sure on how to generate JSON path, Please refer to [JSON path](https://github.com/dchester/jsonpath)
 
-More examples on response JSON data validation can be found [here](https://github.com/kiranz/just-api/blob/master/test/cli/src/suites/jsondata.suite.js)
+More examples on response JSON data validation can be found [here](https://github.com/kiranz/just-api/blob/master/test/specs/suites/jsondata.suite.js)
 
 ### User defined custom response validator functions
 
@@ -369,7 +369,7 @@ You can also specify a custom function defined & exported in a module by providi
           module_path: modules/custom_module.js # module path
           function_name: validateUsersResponse
 ```
-More examples on validating response using custom functions can be found [here](https://github.com/kiranz/just-api/blob/master/test/cli/src/suites/customvalidator.suite.js)
+More examples on validating response using custom functions can be found [here](https://github.com/kiranz/just-api/blob/master/test/specs/suites/customvalidator.suite.js)
 
 ## Custom Javascript functions
 
@@ -483,7 +483,7 @@ configuration:
   base_path: /api
 ```
 
-See More examples [here](https://github.com/kiranz/just-api/tree/master/test/cli/src/suites/suiteconfig)
+See More examples [here](https://github.com/kiranz/just-api/tree/master/test/specs/suites/suiteconfig)
 
 ## Hooks
 
@@ -505,7 +505,7 @@ Just-API supports following hooks so it's easy to manage tests.
  - Before test  (runs before the spec, you can use this hook to setup test pre-requisites )
  - After test  (runs after the spec if spec passes, you can use this hook to teardown/clear any test specific data  )
 
-Check out some samples of hooks [here](https://github.com/kiranz/just-api/tree/master/test/cli/src/suites/hooks)
+Check out some samples of hooks [here](https://github.com/kiranz/just-api/tree/master/test/specs/suites/hooks)
 
 ## Dynamic request construction
 
@@ -722,7 +722,7 @@ You can import specs from one or more suites by listing their paths.
 
 Note that these imported specs will only be available when you run them using `this.runSpec`.
 
-Please find some examples on dependencies [here](https://github.com/kiranz/just-api/blob/master/test/cli/src/suites/suitedependencies/intersuitedeps.suite.js)
+Please find some examples on dependencies [here](https://github.com/kiranz/just-api/blob/master/test/specs/suites/suitedependencies/intersuitedeps.suite.js)
 
 ## Skipping
 You can explicitly skip suites and tests with specification.

@@ -6,10 +6,10 @@ src/
 local/
 test/api/node_modules
 test/api/db.json
-!test/cli/src
-test/cli/src/logs/
-test/cli/src/*.html
-test/cli/src/*.json
+!test/specs
+test/specs/logs/
+test/specs/*.html
+test/specs/*.json
 node_modules/
 docs/site/
 logs/

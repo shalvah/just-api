@@ -8,9 +8,9 @@ local/
 test/
 scripts/
 logs/
-test/cli/src/logs
-test/cli/src/*.html
-test/cli/src/*.json
+test/specs/logs
+test/specs/*.html
+test/specs/*.json
 
 *.html
 *.txt

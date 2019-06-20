@@ -69,19 +69,9 @@ You must pass a comma separated list of key and value pairs to this option as `k
 
 Following keys are supported currently.
 
-  - jsonReportDir
-  - jsonReportName
-  - htmlReportDir
-  - htmlReportName
   - logRequests
 
-`jsonReportDir`: Provide an existing directory path that is relative to Just-API node process's cwd. JSON report will be saved to this directory.
-
-`htmlReportDir`: Provide an existing directory path that is relative to Just-API node process's cwd. HTML report will be saved to this directory.
-
-`jsonReportName`: Provide a name for the JSON report file. JSON report will be saved with this name.
-
-`htmlReportName`: Provide a name for the HTML report file. HTML report will be saved with this name.
+`Reports will be saved to .justapi_reports/report-{timestamp}.<html,json>
 
 `logRequests`: Tells Just-API to log HTTP request & response details in reports for failed tests. Omit this if you don't want to log details.
 
@@ -90,5 +80,5 @@ A sample Just-API invocation would look like:
 
 
 ```sh
-./node_modules/.bin/just-api --reporter html,json --reporter-options jsonReportDir=reports,jsonReportName=json-report,htmlReportDir=reports,htmlReportName=html-report,logRequests     
+./node_modules/.bin/just-api --reporter html,json --reporter-options logRequests     
 ```

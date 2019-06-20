@@ -5,6 +5,7 @@
 src/
 local/
 test/api/node_modules
+test/api/.justapi_reports
 test/api/db.json
 !test/specs
 test/specs/logs/

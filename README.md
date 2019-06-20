@@ -1,6 +1,6 @@
 # Just-API
 
-This is a fork of (kiranz/just-api)[https://github.com/kiranz/just-api]. It's basically the same package, but with updated dependencies and fixed tests, and with one major difference: you get to write spec files in YAML. 
+This is a fork of (kiranz/just-api)[https://github.com/kiranz/just-api]. It's basically the same package, but with updated dependencies and fixed tests, and with two major differences: you get to write spec files in YAML. 
 
 So instead of this:
 
@@ -98,6 +98,10 @@ module.exports = {
 ```
 
 This simplifies things for everyone, developer and user.
+
+Another thing I added is the `--run-server` option. SWhen you specify this option, just-api will attempt to start your local server using `npm start`. So you don't have to have another terminal open, and you can use this in CI easily.
+
+Also, reports now go into a `.justapi_reports/` folder (This can't be configured).
 
 There may be more changes coming in the future, but that's all for now.  To install this fork:
 
